@@ -42,7 +42,7 @@ const getWeather=async (city)=>{
             tempicon.src="./icons/Cloudy.svg"
         }
         else if(id==800){
-            tempicon.src="./icons/Sun.svg"
+            tempicon.src="./icons/Sunny.svg"
         }
         else if(id>800){
             tempicon.src="./icons/Cloud and Sun.svg"
@@ -101,7 +101,7 @@ if(navigator.geolocation){
                 tempicon.src="./icons/Cloudy.svg"
             }
             else if(id==800){
-                tempicon.src="./icons/Sun.svg"
+                tempicon.src="./icons/Sunny.svg"
             }
             else if(id>800){
                 tempicon.src="./icons/Cloud and Sun.svg"
