@@ -1,5 +1,6 @@
 let loc = document.getElementById("location");
 let tempicon=document.getElementById("temp-icon");
+let backimage=document.getElementById("background");
 let tempvalue=document.getElementById("temp-value");
 let climate = document.getElementById("climate");
 let iconfile;
@@ -28,25 +29,33 @@ const getWeather=async (city)=>{
         tempvalue.textContent=Math.round(feels_like-273);
         if(id<300 && id>=200){
             tempicon.src="./icons/Storm.svg"
+            backimage.src="./icons/Storm.jpg"
         }
         else if(id<400 && id>=300){
             tempicon.src="./icons/Cloud.svg"
+            backimage.src="./icons/Cloud.jpg"
         }
         else if(id<600 && id>=500){
             tempicon.src="./icons/Rain.svg"
+            backimage.src="./icons/Rainy.jpg"
         }
         else if(id<700 && id>=600){
             tempicon.src="./icons/Snow.svg"
+            backimage.src="./icons/Snow.jpg"
         }
         else if(id<800 && id>=700){
             tempicon.src="./icons/Cloudy.svg"
+            backimage.src="./icons/Cloudy.jpg"
         }
         else if(id==800){
             tempicon.src="./icons/Sunny.svg"
+            backimage.src="./icons/Clear.jpg"
         }
         else if(id>800){
             tempicon.src="./icons/Cloud and Sun.svg"
+            backimage.src="./icons/Cloud -and-sunny.jpg"
         }
+        
     }
 catch(error){
     alert('city not found');
@@ -87,24 +96,31 @@ if(navigator.geolocation){
             tempvalue.textContent=Math.round(feels_like-273);
             if(id<300 && id>=200){
                 tempicon.src="./icons/Storm.svg"
+                backimage.src="./icons/Storm.jpg"
             }
             else if(id<400 && id>=300){
                 tempicon.src="./icons/Cloud.svg"
+                backimage.src="./icons/Cloud.jpg"
             }
             else if(id<600 && id>=500){
                 tempicon.src="./icons/Rain.svg"
+                backimage.src="./icons/Rainy.jpg"
             }
             else if(id<700 && id>=600){
                 tempicon.src="./icons/Snow.svg"
+                backimage.src="./icons/Snow.jpg"
             }
             else if(id<800 && id>=700){
                 tempicon.src="./icons/Cloudy.svg"
+                backimage.src="./icons/Cloudy.jpg"
             }
             else if(id==800){
                 tempicon.src="./icons/Sunny.svg"
+                backimage.src="./icons/Clear.jpg"
             }
             else if(id>800){
                 tempicon.src="./icons/Cloud and Sun.svg"
+                backimage.src="./icons/Cloud -and-sunny.jpg"
             }
             
             console.log(data);
